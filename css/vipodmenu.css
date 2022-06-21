@@ -1,0 +1,38 @@
+
+.dwSs-menu *
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 240px;
+    margin: 0;
+    padding: 60px;
+    background-color: #F3F9FF;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    text-decoration: none;
+    color: black;
+    font-size: 80px;
+}
+
+.dwSs-menu li ul{
+    
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nopad{
+    padding: 0;
+}
+
+.dwSs-menu li:hover > ul
+{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+

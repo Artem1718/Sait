@@ -1,0 +1,50 @@
+.O_camp{
+    font-family: 'Nunito';
+    text-align: center;
+    background-color: #F3F9FF;
+    border-radius: 12px;
+    height: 809px;
+}
+
+.O_camp_zag{
+    font-size: 80px;
+}
+
+.CampanGroup{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.text{
+    font-size: 18px;
+    font-family: 'Nunito';
+    width: 720px;
+    height: 399px;
+    line-height: 25px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.text ul li{
+    font-size: 30px;
+}
+
+.hh{
+    font-size: 41px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.border{
+    border-radius: 12px;
+   
+}
+
+.border:hover{
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+
+.map{
+    margin-left: auto;
+    margin-right: auto;
+}

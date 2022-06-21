@@ -1,0 +1,133 @@
+.megbl{
+    width: 1600px;
+    height: 1050px;
+    background-color: #fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.normbl{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bl{
+    background: url('../img/SVG/admin.svg');
+    width: 480px;
+    height: 214px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.minP{
+    font-size: 18px;
+    font-family: 'Nunito';
+    color: #667582;
+    text-align: left;
+}
+
+.PP{
+    text-align: left;
+}
+
+.bigbl{
+    width: 1500px;
+    height: 456px;
+    background: url(../img/SVG/bigbl.svg);
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    display: flex;
+}
+
+.vnbigbl{
+    display: flex;
+    flex-direction: column;
+}
+
+.vnbigblb{
+    display: flex;
+    margin: auto;
+}
+
+.P1{
+   font-family: 'Nunito';
+    font-size: 80px;
+    color: #fff;
+    margin-left: 50px;
+}
+
+.P2{
+   font-family: 'Nunito';
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+.P3{
+   font-family: 'Nunito';
+    font-size: 200px;
+    color: #fff;
+    margin-top: 97px;
+    margin-bottom: 86px;
+}
+
+.P4{
+   font-family: 'Nunito';
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+    margin: auto;
+    margin-left: 31px;
+}
+
+.megbl h1{
+    font-family: 'Nunito';
+    font-size: 80px;
+    margin-top: 60px;
+}
+
+.mnbl{
+     width: 480px;
+    height: 180px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.mnblP1{
+    font-family: 'Nunito';
+    font-size: 80px;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.mnblP2{
+    font-family: 'Nunito';
+    font-size: 18px;
+    color: #667582;
+    margin-top: 0px;
+    margin-bottom: 36px;
+}
+
+.bb{
+    width: 1600px;
+    height: 500px;
+    background-color: #F3F9FF;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius:12px;
+    border-bottom-right-radius: 12px;
+}

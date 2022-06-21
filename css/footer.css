@@ -1,0 +1,90 @@
+.Footer{
+    background-color: #000;
+    width: 1920px;
+    height: 767px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Nunito';
+    display: grid;
+    grid-template-columns: repeat(4,1fr);    
+}
+
+.f p{
+    font-size: 18px;
+}
+
+.f li:hover{
+    color: yellow;
+}
+
+.Footer li{
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.Footer h1,h5{
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover { 
+    text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: yellow; /* Ссылка красного цвета */
+   } 
+
+
+.setca1{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 210px;
+    margin-top: 30px;
+}
+.setca2{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-right: 210px;
+}
+
+.setca{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.last{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito';
+    background-color: #000;
+    width: 1920px;
+    color: #fff;
+}
+
+.Youtube{
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.Youtube:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.Inst{
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+.Inst:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}

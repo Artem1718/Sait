@@ -1,0 +1,63 @@
+.vidTR{
+    background: -webkit-linear-gradient(45deg, rgb(81, 97, 94) 2%, rgb(0, 242, 249));
+background: -moz-linear-gradient(45deg, rgb(81, 97, 94) 2%, rgb(0, 242, 249));
+background: linear-gradient(45deg, rgb(81, 97, 94) 2%, rgb(0, 242, 249));
+    width: 1700px;
+    height: 1300px;
+    border-radius: 12px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.Zag{
+    font-size: 80px;
+    font-family: 'Nunito';
+    text-align: center;
+}
+
+.vid{
+    background: url('../img/SVG/Advenduges.svg');
+    width: 735px;
+    height: 331px;
+    border-radius: 11px;
+    margin-left: 50px;
+    margin-right: 50px;
+     outline: 2px solid #000;
+}
+
+.vidZag1{
+    color: #000;
+    font-family: 'Nunito';
+    font-size: 30px;
+    margin-bottom: 0;
+    padding-bottom: 
+}
+
+.mltx{
+     font-family: 'Nunito';
+    font-size: 18px;
+    color: #667582;
+}
+
+.podbut{
+    widows: 142px;
+    height: 60px;
+    background-color: #FFD200;
+    border: none;
+    border-radius: 12px;
+    margin-left: 30px;
+}
+
+.podvid1{
+    margin: 0px 0px 30px 0px;  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.conteiner {
+      display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-row-gap: 30px;
+}

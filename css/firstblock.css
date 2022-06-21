@@ -1,0 +1,137 @@
+.tabs {
+      max-width: 1500px;
+      margin-left: auto;
+      margin-right: auto;
+    background-color: #F3F9FF;
+    margin-bottom: 0;
+    }
+
+    .tabs>input[type="radio"] {
+      display: none;
+    }
+
+    .tabs>input[type="radio"]:checked+label {
+      background-color: #006790;
+        color: #fff;
+    }
+
+    .tabs>div {
+      /* скрыть контент по умолчанию */
+      display: none;
+      border: 1px solid #F3F9FF;
+      padding: 10px 15px;
+      border-radius: 4px;
+    }
+
+    /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+    #tab-btn-1:checked~#content-1,
+    #tab-btn-2:checked~#content-2,
+    #tab-btn-3:checked~#content-3,
+    #tab-btn-4:checked~#content-4{
+      display: block;
+    }
+
+    .tabs>label {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      background-color: #F3F9FF;
+      border: 1px solid transparent;
+      padding: 2px 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      border-radius: 4px;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+      margin-left: 6px;
+      cursor: pointer;
+        margin-top: 50px;
+      margin-bottom: 10px;
+      width: 320px;
+      height: 60px; 
+      border-radius: 12px;
+    }
+
+    .tabs>label:first-of-type {
+      margin-left: 0;
+    }
+
+.sales
+{
+    background-color: #F3F9FF;
+    height: 642px;
+    border-radius: 15px;
+    margin-bottom: 0px;
+}
+
+.box{
+    width: 352px;
+    height: 352px;
+    border-radius: 12px;
+    background-color: #fff;
+    margin-right: 30px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.content
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+p{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.minibox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bt1{
+    background-color:   #FFD200;
+    border-radius: 12px;
+    border: none;
+    height: 60px;
+    width: 262px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bt2{
+    width: 60px;
+    height: 60px;
+    background-color:   #FFD200;
+    border-radius: 12px;
+    border: none;  
+    margin-right: 10px;
+}
+
+#tr1{
+    height:96px;
+    width: 200px;
+    margin-left: 76px;
+}
+#tr2{
+    height:86px;
+    width: 200px;
+    margin-left: 76px;
+}
+#tr3{
+    height:95px;
+    width: 193px;
+    margin-left: 80px;
+}
+#tr4{
+    height:73px;
+    width: 270px;
+    margin-left: 41px;
+}
+.bt1, bt2:hover{
+ 
+}

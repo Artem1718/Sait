@@ -1,0 +1,695 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/header1.css">
+        <link rel="stylesheet" href="css/firstblock.css">
+        <link rel="stylesheet" href="css/vidTR.css">
+        <link rel="stylesheet" href="css/campany.css">
+        <link rel="stylesheet" href="css/advanteges.css">
+        <link rel="stylesheet" href="css/NoTime.css">
+        <link rel="stylesheet" href="css/vipodmenu.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/UpDown.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <meta  charset="utf-8">
+        <title>Грузоперевозки РФ</title>
+        <style>
+            #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 999;
+            -webkit-animation: fade .6s;
+            -moz-animation: fade .6s;
+            animation: fade .6s;
+            overflow: auto;
+            }
+            /* модальный блок */
+            .popup {
+            top: 25%;
+            left: 0;
+            right: 0;
+            font-size: 14px;
+            margin: auto;
+            width: 85%;
+            min-width: 320px;
+            max-width: 600px;
+            position: absolute;
+            padding: 15px 20px;
+            border: 1px solid #383838;
+            background: #fefefe;
+            z-index: 1000;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+            font: 14px/18px 'Tahoma', Arial, sans-serif;
+            -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+            -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+            -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+            box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+            -webkit-animation: fade .6s;
+            -moz-animation: fade .6s;
+            animation: fade .6s;
+            }
+            /* заголовки в модальном блоке */
+            .popup h2, .popup h3 {
+            margin: 0 0 1rem 0;
+            font-weight: 300;
+            line-height: 1.3;
+            color: #FD9339;
+            text-shadow: 1px 2px 4px #ddd;
+            }
+            /* кнопка закрытия */
+            .close {
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            border: none;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            background-color: #FD9339;
+            -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            outline: none;
+
+            }
+            .close:before {
+            color: rgba(255, 255, 255, 0.9);
+            content: "X";
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: none;
+            text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+            }
+            /* кнопка закрытия при наведении */
+            .close:hover {
+            background-color: rgba(252, 20, 0, 0.8);
+            }
+            /* изображения в модальном окне */
+            .popup img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            }
+            /* миниатюры изображений */
+            .pl-left,
+            .pl-right {
+            width: 25%;
+            height: auto;
+            }
+            /* миниатюры справа */
+            .pl-right {
+            float: right;
+            margin: 5px 0 5px 15px;
+            }
+            /* миниатюры слева */
+            .pl-left {
+            float: left;
+            margin: 5px 18px 5px 0;
+            }
+            /* анимация при появлении блоков с содержанием */
+            @-moz-keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1 }
+            }
+            @-webkit-keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1 }
+            }
+            @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1 }
+            }
+        </style>
+    </head>
+    <body>
+       <div id="overlay">
+            <div class="popup">
+                <h2>Здраствуйте!</h2>
+                <p>
+                    Наш сайт предостовляем множество полезных функций.
+                </p>
+                <div class="pl-left">
+                     <img src="img/png/People.png">
+                </div>
+                <p>Грузоперевозки — это процесс, вследствие которого совершается перемещение (транспортировка) из одного места в другое каких-либо объектов с помощью транспорта.</p>
+                <div class="pl-етственно.right">
+                    <img src="img/modal-windows/img2.jpg">
+                </div>
+                    <p>Emma Marsk — самый большой грузовой корабль в мире. Он принадлежит датской компании A.P. Moller-Maersk Group. Его длина составляет 397 метров, а ширина — 63 метра</p>
+                    <p>
+                    Если собрать все перевозимые в течение года колбасы, то их длина превысит 400 000 км. Это на 15,5 тысяч км больше, чем расстояние от Земли до Луны.
+                    </p>
+                    <button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
+                </div>
+            </div>
+            <script type="text/javascript">
+            var delay_popup =
+            5000; setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+            </script>
+       
+       
+        <script src="js/Script1.js"></script>
+       <div class="scroll_panel">
+	        <a href="#" id="scroll_top"><span>↑ Наверх</span></a>
+	        <a href="#" id="scroll_bottom"><span>↓ Вниз</span></a>
+        </div>
+        <div class="wrapper">
+        <header>
+            <div class = "head1">
+                <img src="img/SVG/Logo.svg" id="Logo">
+                <button class="Navbutton1"><img src="img/SVG/Phone.svg"> 7 123 456 78 90</button>
+                <input class="look" placeholder = "Поиск">
+                <select class="select1" name="city[]" id="list">
+                    <option>Выбор города</option>
+                    <option value="Mosk">Москва</option>
+                    <option value="Minsk">Минск</option>
+                    <option value="Grodno">Гродно</option>
+                    <option value="Pekin">Пекин</option>
+                </select>
+                 <button class="Navbutton2"><img src="img/SVG/Calc.svg"> Калькулятор</button>
+                <script src="js/Script3.js"></script>
+                 <button onclick="out()" class="Open"><img src="img/SVG/Client.svg"> Вход</button>
+            </div>
+            
+            <nav class="dws-menu" >
+                <ul>
+                    <li><a href="#">Услуги</a>
+                        <ul>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Международные перевозки</a>
+                    <ul>
+                            <li><a href="#">Международные перевозки</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Для бизнеса</a>
+                    <ul>
+                            <li><a href="#">Для бизнеса</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Частным лицам</a>
+                    <ul>
+                            <li><a href="#">Частным лицам</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">О кампании</a>
+                    <ul>
+                            <li><a href="#">О кампании</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">deliverytrans@gmail.com</a></li>
+                </ul>
+            </nav>
+            
+            <div class="begin">
+                <div class="textheader2">
+                    <p class="Doster">Доставим ваш<br> груз в любую<br> точку России</p>
+                    <p class="Dost">Доставляем сборный груз от 1кг по всей стране<br> 
+узнай стоймость перевозки прямо сейчас</p>
+                </div>
+            </div>
+        </header>
+       
+        <main>
+            <div class="sales">
+            <div class="tabs">
+                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                <label for="tab-btn-1">Тент</label>
+                <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                <label for="tab-btn-2">Грузовик</label>
+                <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                <label for="tab-btn-3">Фургон</label>
+                <input type="radio" name="tab-btn" id="tab-btn-4" value="">
+                <label for="tab-btn-4">Грузовик</label>
+
+                <div id="content-1">
+                    <div class="content">
+                        <div class="box">
+                            <p>Фургон</p>
+                            <img src="img/SVG/tr1.svg" id="tr1">
+                            <div class="minibox">
+                              <button class="bt1">Заказать</button>
+                                <button class="bt2"><img src="img/SVG/Calc.svg"></button>
+                            </div>
+                            
+                        </div>
+                        <div class="box">
+                            <p>Грузовик</p>
+                            <img src="img/SVG/tr2.svg" id="tr2">
+                            <div class="minibox">
+                              <button class="bt1">Заказать</button>
+                                <button class="bt2"><img src="img/SVG/Calc.svg"></button>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p>Фургон</p>
+                            <img src="img/SVG/tr3.svg" id="tr3">
+                            <div class="minibox">
+                              <button class="bt1">Заказать</button>
+                                <button class="bt2"><img src="img/SVG/Calc.svg"></button>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <p>Грузовик</p>
+                            <img src="img/SVG/tr4.svg" id="tr4">
+                            <div class="minibox">
+                              <button class="bt1">Заказать</button>
+                                <button class="bt2"><img src="img/SVG/Calc.svg"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div id="content-2">
+                    <div class="content">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div id="content-3">
+                     <div class="content">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div id="content-4">
+                     <div class="content">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </div><!--Заказать1-->
+            </div>
+            <div class="vidTR"><!--Виды перевозимых грузов-->
+                <p class="Zag"><b>Виды перевозимых грузов</b></p>
+                   <div class="conteiner">
+                    <div class="vid">
+                        <div class="podvid1">
+                            <p class="vidZag1"><b>Экспедирование</b></p>
+                            <p class="mltx">Принимаем, сопровождаем 
+                                и сдаем<br>
+                                груз по утвержденному 
+                                маршруту.<br> 
+                                Контролируем 
+                                правильное<br>
+                                оформление...</p>
+                            <button class="podbut"><b>Подробнее</b></button>
+                        </div>
+                    </div>
+                    <div class="vid">
+                       <div class="podvid1">
+                            <p class="vidZag1"><b>Экспедирование</b></p>
+                            <p class="mltx">Принимаем, сопровождаем 
+                                и сдаем<br>
+                                груз по утвержденному 
+                                маршруту.<br> 
+                                Контролируем 
+                                правильное<br>
+                                оформление...</p>
+                            <button class="podbut"><b>Подробнее</b></button>
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <div class="podvid1">
+                            <p class="vidZag1"><b>Экспедирование</b></p>
+                            <p class="mltx">Принимаем, сопровождаем 
+                                и сдаем<br>
+                                груз по утвержденному 
+                                маршруту.<br> 
+                                Контролируем 
+                                правильное<br>
+                                оформление...</p>
+                            <button class="podbut"><b>Подробнее</b></button>
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <div class="podvid1">
+                            <p class="vidZag1"><b>Экспедирование</b></p>
+                            <p class="mltx">Принимаем, сопровождаем 
+                                и сдаем<br>
+                                груз по утвержденному 
+                                маршруту.<br> 
+                                Контролируем 
+                                правильное<br>
+                                оформление...</p>
+                            <button class="podbut"><b>Подробнее</b></button>
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <div class="podvid1">
+                            <p class="vidZag1"><b>Экспедирование</b></p>
+                            <p class="mltx">Принимаем, сопровождаем 
+                                и сдаем<br>
+                                груз по утвержденному 
+                                маршруту.<br> 
+                                Контролируем 
+                                правильное<br>
+                                оформление...</p>
+                            <button class="podbut"><b>Подробнее</b></button>
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <div class="podvid1">
+                            <p class="vidZag1"><b>Экспедирование</b></p>
+                            <p class="mltx">Принимаем, сопровождаем 
+                                и сдаем<br>
+                                груз по утвержденному 
+                                маршруту.<br> 
+                                Контролируем 
+                                правильное<br>
+                                оформление...</p>
+                            <button class="podbut"><b>Подробнее</b></button>
+                        </div>
+                    </div>
+                    </div>  
+            </div><!--Виды перевозимых грузов-->
+            <div class="O_camp"><!--О кампании-->
+                <h1 class="O_camp_zag">О кампании</h1>
+                <div class="CampanGroup">
+                    <div>
+                        <h1 class="hh">Lorem ipsum dolor sit amet</h1>
+                            <div class="text">
+                                <p>
+                                Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+                                <ul>
+                                    <li> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditii</li>
+                                    <li>Sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt </li>
+                                </ul>
+                                <p>Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+                            </div>
+                    </div>
+                    <img src="img/png/People.png" class="border gradient">
+                </div>
+            </div><!--О кампании-->
+            <div class="map">
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae16fe8a359d3f871275c4a66ea53280a6cc28cbfda9684cef9e314df21f15456&amp;width=500&amp;height=407&amp;lang=ru_RU&amp;scroll=true"></script>  
+            </div>
+            <div class="megbl"><!--Преимущества-->
+                <h1><b>Преимущества</b></h1>
+                <div class="normbl">
+                    <div class="bl">
+                        <p class="PP"><b>Гарантия цены</b></p>
+                        <p class="minP">Исполнитель<br>
+                            не изменит цену и условия <br>
+                            в последний момент</p>
+                    </div>
+                    <div class="bl">
+                        <p class="PP"><b>Гарантия цены</b></p>
+                        <p class="minP">Исполнитель<br>
+                            не изменит цену и условия <br>
+                            в последний момент</p>
+                    </div>
+                    <div class="bl">
+                        <p class="PP"><b>Гарантия цены</b></p>
+                        <p class="minP">Исполнитель<br>
+                            не изменит цену и условия <br>
+                            в последний момент</p>
+                    </div>
+                    <div class="bl">
+                        <p class="PP"><b>Гарантия цены</b></p>
+                        <p class="minP">Исполнитель<br>
+                            не изменит цену и условия <br>
+                            в последний момент</p>
+                    </div>
+                    <div class="bl">
+                        <p class="PP"><b>Гарантия цены</b></p>
+                        <p class="minP">Исполнитель<br>
+                            не изменит цену и условия <br>
+                            в последний момент</p>
+                    </div>
+                    <div class="bl">
+                        <p class="PP"><b>Гарантия цены</b></p>
+                        <p class="minP">Исполнитель<br>
+                            не изменит цену и условия <br>
+                            в последний момент</p>
+                    </div>
+                </div>
+                
+                <div class="bigbl">
+                    <div class="vnbigbl">
+                        <p class="P1">О нас в цифрах</p>
+                        <p class="P2">
+                            Consectetur adipiscing elit, sed do eiusmod tempor incididunt<br>
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br>
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea<br>
+                            commodo consequat. Duis aute irure dolor                        
+                        </p>
+                    </div>
+                    <div class="vnbigblb">
+                        <P class="P3">#6</P>
+                        <p class="P4">Consectetur adipiscing elit,<br>
+                            sed do eiusmod tempor</p>
+                    </div>
+                </div>
+            </div><!--Преимущества-->
+            <div class="bb">
+                <div class="normbl">
+                    <div class="mnbl">
+                        <p class="mnblP1"><b>3500</b></p>
+                        <p class="mnblP2">Профессиональных сотрудников</p>
+                    </div>
+                    <div class="mnbl">
+                        <p class="mnblP1"><b>3500</b></p>
+                        <p class="mnblP2">Профессиональных сотрудников</p>
+                    </div>
+                    <div class="mnbl">
+                        <p class="mnblP1"><b>3500</b></p>
+                        <p class="mnblP2">Профессиональных сотрудников</p>
+                    </div>
+                    <div class="mnbl">
+                        <p class="mnblP1"><b>3500</b></p>
+                        <p class="mnblP2">Профессиональных сотрудников</p>
+                    </div>
+                    <div class="mnbl">
+                        <p class="mnblP1"><b>3500</b></p>
+                        <p class="mnblP2">Профессиональных сотрудников</p>
+                    </div>
+                    <div class="mnbl">
+                        <p class="mnblP1"><b>3500</b></p>
+                        <p class="mnblP2">Профессиональных сотрудников</p>
+                    </div>
+                </div>
+            </div>  
+            
+            <script src="js/Script3.js"></script>            
+            <div class="contNoTime"><!--Нет времени разбираться-->
+                <h1 class="megZag">Нет времени разбираться?</h1>
+                <h1 class="megZag">Подскажем!</h1>
+                <div class="flexBox">
+                    <div class="inputBL">
+                        <p class="SogIn">Я хочу перевезти</p>
+                        <input type="text" placeholder="Например: Кухонный уголок" class="vod" name="Item">
+                    </div>
+                
+                    <div class="inputBL">
+                        <p class="SogIn">Откуда - Куда</p>
+                        <input type="text" placeholder="Например: Москва - Владивосток" class="vod" name="login">
+                    </div>
+                
+                    <div class="inputBL">
+                        <p class="SogIn">Телефон</p>
+                        <input type="tel" placeholder="+7 ___ ___ __ __" class="vod" name="tel">
+                    </div>  
+                </div>
+                <div class="flexBox mar">
+                        <div class="flexBoxMin">
+                             <input type="checkbox" class="chbx">
+                             <p class="Sog">Согласие на обработку персональных данных</p>
+                        </div>
+                        <button class="butPod">Оставить заявку</button>
+                </div>
+            </div><!--Нет времени разбираться-->
+            <div class="dwSs-menu">
+                <ul>
+                    <li class="nopad" ><a href="#">Рекомендации наших клиентов ∨</a>
+                        <ul>
+                            <li><a href="#">Рекомендации наших клиентов</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="dwSs-menu">
+                <ul>
+                    <li class="nopad"><a href="#">Новости и акции ∨</a>
+                        <ul>
+                            <li><a href="#">Новости и акции</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="dwSs-menu">
+                <ul>
+                    <li class="nopad"><a href="#">Наши партнёры ∨</a>
+                        <ul>
+                            <li><a href="#">Наши партнёры</a></li>
+                            <li><a href="#">услуга2</a></li>
+                            <li><a href="#">услуга3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="f">
+          <div class="Footer">
+               <div class="setca1">
+            <div>
+                <h1>О компании</h1>
+                <ul>
+                    <li><a href="#">Филиалы</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Горячая линия</a></li>
+                </ul>
+            </div><!--О кампании-->
+            <div>
+                <h5>Контакты</h5>
+                <ul>
+                    <li><a href="#"><img src="img/SVG/tel.svg">+7 987 654 32 10</a></li>
+                    <li><a href="#"><img src="img/SVG/mail.svg">mail@mail.ru</a></li>
+                    <li><a href="#"><img src="img/SVG/whatsapp.svg">WhatsApp</a></li>
+                    <li><a href="#"><img src="img/SVG/adres.svg">Москва ул.Лобачина 11</a></li>
+                </ul>
+            </div><!--Контакты-->
+            <div>
+                <h5>Соц сети</h5>
+                <a href="#"><img class="Youtube" src="img/SVG/Youtube.svg"></a>
+                <a href="#"><img class="Inst" src="img/SVG/inst.svg"></a>
+            </div><!--Соц сети-->
+            </div>
+            <div class="setca">
+                <div>
+                <h5>Направления</h5>
+                <ul>
+                    <li><a href="#">Тарифы</a></li>
+                    <li><a href="#">Требования к грузу</a></li>
+                    <li><a href="#">Треьования к упаковке</a></li>
+                </ul>
+            </div><!--Направления-->
+            <div>
+                <h5>Услуги</h5>
+                <ul>
+                    <li><a href="#">Тарифы</a></li>
+                    <li><a href="#">Проверка груза по ттн</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Электронный</a></li>
+                </ul>
+            </div><!--Услуги-->
+            <div>
+                <h5>Акции</h5>
+            </div><!--Акции-->
+            <div>
+                <h5>Блог</h5>
+            </div><!--Блог-->
+            </div>
+            
+            <div class="setca">
+                <div>
+                <h5>Международные перевозки</h5>
+                <ul>
+                    <li><a href="#">Грузоперевозки Москва-Омск</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Красноярск</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Ростов-на-Дону</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Омск</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Барнаул</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Самара</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Челябинск</a></li>
+                </ul>
+            </div><!--Международные перевозки-->
+            <div>
+                <h5>Условия перевозок</h5>
+                <ul>
+                   <li><a href="#">Грузоперевозки Москва-Омск</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Красноярск</a></li>
+                    <li><a href="#">Грузоперевозки Москва-Ростов-на-Дону</a></li>
+                </ul>
+            </div><!--Условия перевозок-->
+            <div>
+                <h5>Автопарк</h5>
+            </div><!--Автопарк-->
+            </div>
+            
+            <div class="setca2">
+                <div>
+                <h5>Для бизнеса</h5>
+                <ul>
+                    <li><a href="#">Филиалы</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Горячая линия</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div><!--Для бизнеса-->
+            <div>
+                <h5>Частным лицам</h5>
+                <ul>
+                  <li><a href="#">Филиалы</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Блог</a></li>
+                </ul>
+            </div><!--Частным лицам-->
+            <div>
+                <h5>Водителям</h5>
+                <ul>
+                    <li><a href="#">Филиалы</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Блог</a></li>
+                </ul>
+            </div><!--Водителям--> 
+            </div>  
+            </div>
+            <div class="last">
+                <p>Политика конфиденциальности</p>
+                <p>Реквизиты</p>
+            </div>       
+        </footer>
+        </div>
+    </body>
+</html>

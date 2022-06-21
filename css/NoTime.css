@@ -1,0 +1,72 @@
+.contNoTime{
+    background: url(../img/SVG/TruckNaBGBL.svg);
+    width: 1920px;
+    height: 608px;
+    text-align: center;
+    margin-top: 0px;
+}
+.flexBox{
+    width: 1505px;
+    height: 80px;
+    display: flex;
+    justify-content:space-between; 
+    margin: auto;
+}
+
+.inputBL{
+    width: 480px;
+    height: 80px;
+    border-top-left-radius: 12px;
+     border-top-right-radius:     12px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+}
+
+.butPod{
+    margin-top: 20px;
+    height: 60px;
+    width: 190px;
+    background-color: #FFD200;
+    border-radius: 12px;
+    border: none;
+}
+.flexBoxMin{
+    display: flex;
+    justify-content: flex-start;
+}
+.Sog{
+    font-size: 18px;
+    color: #fff;
+}
+.chbx{
+    border-radius: 6px;
+    height: 24px;
+    width: 24px;
+    border: none;
+    margin: auto;
+}
+.SogIn{
+    font-size: 18px;
+    color: #667582;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    
+}
+.mar{
+    margin-top: 40px;
+}
+
+.megZag{
+    font-size: 80px;
+    color: #fff;
+}
+
+.vod{
+    padding: 30px;
+    border-style: none;
+    height: 40px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
